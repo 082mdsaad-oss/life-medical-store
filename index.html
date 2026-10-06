@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Life Medical Store | Manoharpur</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: rgba(255,255,255,0.97);
+            padding: 14px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0b8f55;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            background:
+                radial-gradient(circle at 90% 20%, rgba(11,143,85,0.12), transparent 25%),
+                linear-gradient(135deg, #e9fff4 0%, #ffffff 55%, #dff7ed 100%);
+            padding: 65px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 610px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            line-height: 1.12;
+            color: #087443;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .hero-location {
+            color: #087443 !important;
+            font-weight: bold;
+            font-size: 15px !important;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0b8f55;
+            color: white;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(11,143,85,0.18);
+        }
+
+        .btn:hover {
+            background: #066b3f;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            color: #0b8f55;
+            padding: 11px 22px;
+            border: 2px solid #0b8f55;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #0b8f55;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            width: 460px;
+            height: 340px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(8,116,67,0.18);
+            border: 8px solid white;
+            flex-shrink: 0;
+            background: white;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.04);
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+            padding: 65px 20px;
+        }
+
+        .about-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .about-icon {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #e9fff4, #d7f7e9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 85px;
+            flex-shrink: 0;
+            box-shadow: 0 15px 35px rgba(11,143,85,0.10);
+        }
+
+        .about-text {
+            max-width: 650px;
+        }
+
+        .about-text h2 {
+            color: #087443;
+            font-size: 34px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* ================= WHY CHOOSE US ================= */
+
+        .why-us {
+            padding: 65px 20px;
+            text-align: center;
+            background: #f5f7fa;
+        }
+
+        .why-us h2 {
+            color: #087443;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .why-cards {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .why-card {
+            background: white;
+            width: 240px;
+            padding: 30px 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            transition: 0.3s;
+            border: 1px solid #edf0f2;
+        }
+
+        .why-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+        }
+
+        .why-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .why-card h3 {
+            color: #0b8f55;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .categories {
+            background: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .products-heading {
+            max-width: 750px;
+            margin: 0 auto 35px;
+        }
+
+        .products-heading span {
+            color: #0b8f55;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .products-heading h2 {
+            color: #087443;
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .products-heading p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .category-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #f8fafb;
+            padding: 30px 20px;
+            border-radius: 14px;
+            border: 1px solid #e5e9eb;
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+            border-color: #ccefe0;
+        }
+
+        .category-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .category-card h3 {
+            color: #0b8f55;
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            padding: 65px 20px;
+            text-align: center;
+            background: #f5f7fa;
+        }
+
+        .services h2 {
+            color: #087443;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 30px 22px;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            border-top: 4px solid #0b8f55;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+        }
+
+        .card h3 {
+            color: #0b8f55;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: linear-gradient(135deg, #087443, #0b8f55);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: #087443;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #e9fff4;
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #12352a;
+            color: white;
+            padding: 38px 20px 18px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            color: #d5e5df;
+            line-height: 1.6;
+            max-width: 350px;
+        }
+
+        .footer-contact {
+            line-height: 1.9;
+        }
+
+        .footer-contact p {
+            color: #e5f1ed;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 25px auto 0;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            color: #c9d8d3;
+            font-size: 13px;
+        }
+
+        /* ================= LOCATION ================= */
+
+        #location {
+            background: white;
+            padding: 55px 20px !important;
+            text-align: center;
+        }
+
+        #location h2 {
+            color: #087443;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        #location p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #location iframe {
+            width: 100%;
+            height: 450px;
+            max-width: 1000px;
+            border: 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+                gap: 35px;
+            }
+
+            .hero-image {
+                width: 400px;
+                height: 300px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 14px;
+                padding: 12px 15px;
+            }
+
+            .logo img {
+                width: 135px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: min(100%, 420px);
+                height: 280px;
+                border-radius: 20px;
+            }
+
+            .about {
+                padding: 55px 20px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .about-icon {
+                width: 190px;
+                height: 190px;
+                font-size: 65px;
+            }
+
+            .about-text h2 {
+                font-size: 29px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-heading h2 {
+                font-size: 27px;
+            }
+
+            .why-us,
+            .categories,
+            .services {
+                padding: 55px 20px;
+            }
+
+            .why-us h2,
+            .services h2,
+            #location h2 {
+                font-size: 28px;
+            }
+
+            .contact h2 {
+                font-size: 28px;
+            }
+
+            .footer-content {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .footer-logo p {
+                margin: auto;
+            }
+
+            #location iframe {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-image {
+                height: 240px;
+            }
+
+            .btn,
+            .btn-outline,
+            .contact-btn {
+                padding: 11px 17px;
+                font-size: 14px;
+            }
+
+            .why-card,
+            .card {
+                width: 100%;
+                max-width: 330px;
+            }
+
+            #location iframe {
+                height: 300px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <a href="#home" class="logo">
+            <img src="logo.png" alt="Life Medical Store Logo">
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#categories">Products</a>
+            <a href="#location">Location</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>
+                    Your Health,<br>
+                    Our Priority
+                </h1>
+
+                <p>
+                    Trusted medicines, healthcare products
+                    and quality service at Life Medical Store.
+                </p>
+
+                <p class="hero-location">
+                    📍 Main Road, Near Bus Stand, Manoharpur, Jharkhand
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn">
+                        Visit Our Store
+                    </a>
+
+                    <a href="https://wa.me/916205230443?text=Hello%20Life%20Medical%20Store%2C%20I%20want%20to%20order%20medicines."
+                       target="_blank"
+                       class="btn">
+                        💬 WhatsApp
+                    </a>
+
+                    <a href="#services" class="btn-outline">
+                        Our Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="pharmacy.png"
+                    alt="Life Medical Store">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <div class="about-icon">
+                💊
+            </div>
+
+            <div class="about-text">
+
+                <h2>About Life Medical Store</h2>
+
+                <p>
+                    Life Medical Store is a trusted medical store
+                    serving the people of Manoharpur and nearby areas.
+                </p>
+
+                <p>
+                    We provide medicines, healthcare products and
+                    everyday health essentials with a focus on
+                    quality service and customer care.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why-us">
+
+        <h2>Why Choose Us</h2>
+
+        <div class="why-cards">
+
+            <div class="why-card">
+
+                <div class="why-icon">💊</div>
+
+                <h3>Quality Products</h3>
+
+                <p>
+                    Genuine medicines and healthcare products.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">🤝</div>
+
+                <h3>Trusted Service</h3>
+
+                <p>
+                    Friendly and helpful customer service.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">📍</div>
+
+                <h3>Easy Location</h3>
+
+                <p>
+                    Conveniently located in Manoharpur.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">⚡</div>
+
+                <h3>Quick Service</h3>
+
+                <p>
+                    Fast service for your everyday healthcare needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="categories" id="categories">
+
+        <div class="products-heading">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2>Healthcare Essentials for Your Family</h2>
+
+            <p>
+                Quality healthcare products and daily essentials
+                available at Life Medical Store.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <div class="category-card">
+
+                <div class="category-icon">💊</div>
+
+                <h3>Medicines</h3>
+
+                <p>
+                    Daily-use medicines and healthcare products.
+                </p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🩹</div>
+
+                <h3>First Aid</h3>
+
+                <p>
+                    Bandages, antiseptic products and first-aid essentials.
+                </p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🧴</div>
+
+                <h3>Personal Care</h3>
+
+                <p>
+                    Personal hygiene and everyday healthcare essentials.
+                </p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">👶</div>
+
+                <h3>Baby Care</h3>
+
+                <p>
+                    Baby care products and essential items.
+                </p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🏥</div>
+
+                <h3>Healthcare</h3>
+
+                <p>
+                    Useful healthcare products for everyday needs.
+                </p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🥛</div>
+
+                <h3>Nutrition</h3>
+
+                <p>
+                    Nutrition and wellness products for your family.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>Medicine Availability</h3>
+
+                <p>
+                    Check availability of medicines and healthcare products.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Healthcare Products</h3>
+
+                <p>
+                    Daily-use healthcare and personal care products.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>WhatsApp Enquiry</h3>
+
+                <p>
+                    Contact us easily through WhatsApp for enquiries.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Life Medical Store</h2>
+
+        <p>
+            📍 Main Road, Near Bus Stand, Manoharpur,
+            West Singhbhum, Jharkhand - 833104
+        </p>
+
+        <p>
+            📞 6205230443
+        </p>
+
+        <p>
+            ✉️ 082mdsaad@gmail.com
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a href="tel:6205230443" class="contact-btn">
+                📞 Call Us
+            </a>
+
+            <a href="https://wa.me/916205230443"
+               target="_blank"
+               class="contact-btn">
+                💬 WhatsApp
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Life+Medical+Store+Manoharpur+West+Singhbhum+Jharkhand+833104"
+               target="_blank"
+               class="contact-btn">
+                📍 Google Maps
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div class="footer-logo">
+
+                <h3>Life Medical Store</h3>
+
+                <p>
+                    Your trusted destination for medicines,
+                    healthcare products and everyday health essentials.
+                </p>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <p>📍 Manoharpur, Jharkhand</p>
+
+                <p>📞 6205230443</p>
+
+                <p>✉️ 082mdsaad@gmail.com</p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Life Medical Store. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= LOCATION ================= -->
+
+    <section id="location">
+
+        <h2>Our Location</h2>
+
+        <p>
+            Life Medical Store, Main Road, Near Daily Market,
+            Manoharpur, Jharkhand
+        </p>
+
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.486185190461!2d85.19717630000001!3d22.373021899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1fe7d0a1f7f57d%3A0xea3d6cea3789ce44!2sLIFE%20MEDICAL%20STORE!5e0!3m2!1sen!2sin!4v1791264147246!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+    </section>
+
+
+</body>
+
+</html>
